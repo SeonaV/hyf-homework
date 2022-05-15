@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="head">
+        <div class="logo">
+            <img src="logo.png" width="100px" >
+          </div>
+          <div class="nav">
+            <ul class="menu">
+                <li><a href="#" target="_blank"> Home </a> </li>
+                <li><a href="#" target="_blank"> About </a> </li>
+                <li><a href="#" target="_blank"> Team </a> </li>
+                <li><a href="#" target="_blank"> Contact </a> </li>
+            </ul>
+          </nav>
+  </header>
+  <main>
+      <h1>Sign up to yourcustomtailor.com</h1>
+      <p>We can't wait to help you improve your life-style and gain the attention
+         <br>from people around you.</p><br>
+       <p>Sign up below to save up to 70% on apparel, hand-bags and cosmetics. 
+        Our agents are busy<br>picking the best offers that match your preferences and style. Every week we will send you a
+        <br>hand-picked selection - we just need to know a few details about your first....</p>  
+      <h2> Step 1/4 - tell us who you are ? </h2>
+    
+      <section>
+          <form>
+              <h3>Progress</h3>
+              <div class="progress_bar1">
+                  <div class="fill">
+                      <span class="progress_bar_1"></span>
+                  </div>
+              </div>
+            <br>
+            <p>Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:</p>
+              <br>
+            <div class="tab_name">
+                <div>
+                    <label for="FirstName">First Name</label>
+                    <input type="text" name="firstname" id="firstname" required>
+                </input>
+            </div>
+            <div>
+                <label for="LastName">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" required>
+                </input>
+            </div>
+            </div>
+        <div class="tab_country">
+            <div>
+            <label for="country">Country</label>
+            <select id="country" name="country" form="country" size="1" required>
+            <option>Denmark</option>
+            <option>India</option>
+            <option>Germany</option>
+        </select>
+        </div>
+            </div>
+        <div class="address">
+            <div>
+                <label for="address">Street Address</label>
+                <input type="text" name="address" id="address">
+                </input>
+            </div>
+            <div class="post">
+                
+                <label for="postcode">Postcode</label>
+                <input type="text" name="postcode" id="postcode" maxlength="4">
+                </input>
+            </div>
+        </div>
+        <div class="text">
+            <div>
+                <label for="text">Profile description</label>
+                <br>
+                <p>please provide a short<br>
+                    description of yourself to be<br>
+                    displayed on our social<br>
+                    community pages
+                </p>
+            </div>
+
+            <div class="text-box">
+                <textarea name="textarea" id="textarea" cols="145" rows="10" maxlength="500"></textarea>
+            </div>
+        </div>
+        <p>Use the same address for billing and shipping?Uncheck 
+            below to fill out a seperate billing address.</p>
+            <br>
+            <div class="shipping">
+            <label for="shipping">Shipping address</label>
+            <input type="checkbox" id="shipping" name="shipping" value="shipping" checked="" required="">
+            </div>
+            <div class="button">
+                <a href="page2.html" target="_self">
+                <input type="button" value="Next step" class="form-btn"></a>
+            </div>
+        </div>
+</form>
+</section>
+</main>
+<footer>
+</footer>
+
+    
+</body>
+</html>
