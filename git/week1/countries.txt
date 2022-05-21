@@ -1,0 +1,4 @@
+Countries visited
+1. Germany
+2. Sweden
+3. Switzerland
