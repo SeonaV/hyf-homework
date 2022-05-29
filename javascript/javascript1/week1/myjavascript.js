@@ -33,7 +33,7 @@ const gardenSizeInM2 = 100 ;
 
  //Calculation for Volume in Meters for Peter
 
- let PvolumeInMeters = PWidth * PHeight * PDepth;
+ const PvolumeInMeters = PWidth * PHeight * PDepth;
 
  //Peter House Price
 
@@ -41,9 +41,9 @@ const gardenSizeInM2 = 100 ;
 
  housePriceforPeter = PvolumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 
- if (housePriceforPeter < actualPeterPrice){
+ if (housePriceforPeter > actualPeterPrice){
      console.log("Peter High price")
- } else if (housePriceforPeter == actualPeterPrice){
+ } else if (housePriceforPeter === actualPeterPrice){
     console.log("Peter expected amount")
  } else {
     console.log("Peter low price")
@@ -56,7 +56,7 @@ const gardenSizeInM2 = 100 ;
  const JDepth = 11;
 
  //Calculation for Volume in Meters for Julia
- let JvolumeInMeters = JWidth * JHeight * JDepth;
+const JvolumeInMeters = JWidth * JHeight * JDepth;
 
  //Julia House Price
 
@@ -64,9 +64,9 @@ const gardenSizeInM2 = 100 ;
 
  housePriceforJulia = JvolumeInMeters  * 2.5 * 1000 + JgardenSizeInM2 * 300;
 
- if (housePriceforJulia < actualJuliaPrice){
-     console.log("Julia high pricd")
- } else if (housePriceforJulia == actualJuliaPrice){
+ if (housePriceforJulia > actualJuliaPrice){
+     console.log("Julia high price")
+ } else if (housePriceforJulia === actualJuliaPrice){
     console.log("Julia expected amount")
  } else {
     console.log("Julia low price")
