@@ -10,31 +10,33 @@ const names = [
     "katrine",
     "Tala",
   ];
-  const nameToRemove = "Ahmad";
+const nameToRemove = "Ahmad";
+names.indexOf(nameToRemove);
+names.splice(names.indexOf(nameToRemove), 1);
+console.log(names)
 
-  for (let i=0; i< names.length - 1;i++) {
-    if (names[i] === nameToRemove) {
-        names.splice(i, 1);
-  }
-}
-console.log (names);
 
 //second task Km/h
 
 const travelInformation = {
     speed: 50,
-    destinatiojavanDistance: 432,
+    destinationDistance: 432,
   };
+  function timeToDestination(speed, destinationDistance) {
+    arrivingTime = destinationDistance / speed;
+    diff = arrivingTime - Math.floor(arrivingTime);
+    if (diff == 0) {
+        return console.log(`You will arrive in ${arrivingTime} hours`);
+    }
 
-  function arrYourDestination(travelInformation){
-      const travelTime = travelInformation.destinationDistance / travelInformation.speed;
-      return travelTime;
-  }
-  
-  const travelTime = arrYourDestination(travelInformation);
-  console.log(travelTime); 
+    else
+        return console.log(`You will arrive in ${Math.floor(arrivingTime)} hours and ${Math.round(diff * 60)} minutes`);
+}
 
-  //third task, duration of life
+timeToDestination(50, 432); 
+
+
+//third task, duration of life
     const seriesDurations = [
         {
           title: "Game of thrones",
@@ -101,7 +103,7 @@ console.log(note);
 // function to find obeject with id number
 
 function getNote(id) {
-  if (typeof id !== "number" || typeof id === "null" || id > note.length) {
+  if (typeof id !== "number" || id > note.length) {
     return "Error:This is not a valid id";
   } else {
     for (let i = 0; i < note.length; i++) {
