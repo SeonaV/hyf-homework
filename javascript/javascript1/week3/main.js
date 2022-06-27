@@ -24,13 +24,13 @@ const travelInformation = {
   };
   function timeToDestination(speed, destinationDistance) {
     arrivingTime = destinationDistance / speed;
-    diff = arrivingTime - Math.floor(arrivingTime);
-    if (diff == 0) {
+    difference = arrivingTime - Math.floor(arrivingTime);
+    if (difference == 0) {
         return console.log(`You will arrive in ${arrivingTime} hours`);
     }
 
     else
-        return console.log(`You will arrive in ${Math.floor(arrivingTime)} hours and ${Math.round(diff * 60)} minutes`);
+        return console.log(`You will arrive in ${Math.floor(arrivingTime)} hours and ${Math.round(difference * 60)} minutes`);
 }
 
 timeToDestination(50, 432); 
@@ -58,30 +58,28 @@ timeToDestination(50, 432);
         },
       ];
       
-      function getSeriesTime() {
+      function logOutSeriesText() {
         let totalTime = 0;
-        for (index = 0; index < seriesDurations.length; index++) {
+        for (i = 0; i < seriesDurations.length; i++) {
           let time =
-            ((seriesDurations[index].days * 24 * 60 +
-              seriesDurations[index].hours * 60 +
-              seriesDurations[index].minutes) /
+            ((seriesDurations[i].days * 24 * 60 +
+              seriesDurations[i].hours * 60 +
+              seriesDurations[i].minutes) /
               (80 * 365 * 24 * 60)) * 100;
              
           console.log(
-            `${seriesDurations[index].title} took ${time.toFixed(3)}% of my life`
+            `${seriesDurations[i].title} took ${time.toFixed(3)}% of my life`
           );
           totalTime += time;
         }
         console.log(`In total that is ${totalTime.toFixed(3)}% of my life`);
       }
       
-      getSeriesTime();
+     logOutSeriesText();
 
       // Fourth SAVE Note
 
       const note = [];
-
-// fuction to push notes in array
 
 function saveNote(content, id) {
   if (typeof content !== "string" && typeof id !== Number) {
@@ -91,16 +89,12 @@ function saveNote(content, id) {
   }
 }
 
-// adding notes to array
-
 saveNote("Pick up groceries", 1);
 saveNote("Do laundry", 2);
 saveNote("Call Dcoctor", 3);
 saveNote("Pick up Kids",4)
 
 console.log(note);
-
-// function to find obeject with id number
 
 function getNote(id) {
   if (typeof id !== "number" || id > note.length) {
@@ -116,8 +110,6 @@ function getNote(id) {
 
 const firstNote = getNote(3);
 console.log(firstNote);
-
-// function to log all notes with some stings
 
 function logOutNotesFormatted() {
   for (let i = 0; i < note.length; i++) {
